@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Communication Skills Masterclass | Puig, September 2026</title>
+<meta name="description" content="Programme hub for the Puig Communication Skills Masterclass. Sessions, worksheets and materials in one place.">
+<style>
+:root{
+  --navy:#1F3864;
+  --blue:#2E5496;
+  --blue-soft:#E8EDF6;
+  --grey:#F4F5F7;
+  --line:#DDE1E8;
+  --ink:#23262B;
+  --muted:#5C6470;
+  --amber:#8C6316;
+  --amber-soft:#FBF3E2;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:#fff;
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%}
+a{color:var(--blue)}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+
+/* ---------- masthead ---------- */
+.masthead{background:var(--navy);color:#fff;padding:46px 0 40px}
+.masthead .eyebrow{
+  font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:#A9BCDC;margin:0 0 20px;font-weight:600;
+}
+.masthead h1{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(30px,6vw,44px);line-height:1.15;margin:0 0 10px;
+}
+.masthead .sub{font-size:17px;color:#C7D4EA;margin:0}
+.masthead .through{
+  margin:30px 0 0;padding:20px 22px;
+  border-left:3px solid #6C8BC2;background:rgba(255,255,255,.06);
+  font-family:var(--serif);font-size:18px;line-height:1.5;color:#EAF0FA;
+}
+
+/* ---------- nav ---------- */
+nav{
+  position:sticky;top:0;z-index:20;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:saturate(1.4) blur(8px);
+  border-bottom:1px solid var(--line);
+}
+nav ul{
+  display:flex;gap:4px;list-style:none;margin:0 auto;padding:0 16px;
+  max-width:860px;overflow-x:auto;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+nav ul::-webkit-scrollbar{display:none}
+nav a{
+  display:block;white-space:nowrap;padding:13px 12px;
+  font-size:14px;font-weight:600;color:var(--muted);text-decoration:none;
+  border-bottom:2px solid transparent;
+}
+nav a:hover{color:var(--navy)}
+nav a.on{color:var(--navy);border-bottom-color:var(--blue)}
+
+/* ---------- status strip ---------- */
+.status{background:var(--amber-soft);border-bottom:1px solid #EADFC4}
+.status .inner{padding:20px 24px;display:flex;gap:18px;align-items:flex-start}
+.status .dot{
+  flex:none;width:9px;height:9px;border-radius:50%;
+  background:var(--amber);margin-top:9px;
+}
+.status h2{
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  margin:0 0 4px;color:var(--amber);font-weight:700;
+}
+.status p{margin:0;font-size:16px}
+.status strong{color:var(--ink)}
+
+/* ---------- sections ---------- */
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+h2.sec{
+  font-family:var(--serif);font-weight:400;font-size:28px;
+  color:var(--navy);margin:0 0 8px;
+}
+.lede{color:var(--muted);margin:0 0 32px;max-width:62ch}
+h3{font-size:18px;margin:0 0 8px;color:var(--navy)}
+
+/* ---------- timeline ---------- */
+.tl{list-style:none;margin:0;padding:0}
+.tl li{
+  position:relative;padding:0 0 26px 30px;
+  border-left:2px solid var(--line);
+}
+.tl li:last-child{border-left-color:transparent;padding-bottom:0}
+.tl li::before{
+  content:"";position:absolute;left:-7px;top:5px;
+  width:12px;height:12px;border-radius:50%;
+  background:#fff;border:2px solid var(--line);
+}
+.tl li.done::before{background:var(--line);border-color:var(--line)}
+.tl li.next::before{background:var(--amber);border-color:var(--amber)}
+.tl li.next{border-left-color:var(--amber)}
+.tl .when{
+  font-size:13px;font-weight:600;letter-spacing:.04em;
+  color:var(--muted);text-transform:uppercase;
+}
+.tl li.next .when{color:var(--amber)}
+.tl .what{font-size:17px;font-weight:600;color:var(--navy);margin:2px 0 2px}
+.tl .note{font-size:15px;color:var(--muted);margin:0}
+.tag{
+  display:inline-block;margin-left:8px;padding:1px 8px;
+  font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  border-radius:20px;vertical-align:2px;
+}
+.tag.done{background:var(--grey);color:var(--muted)}
+.tag.next{background:var(--amber);color:#fff}
+
+/* ---------- module cards ---------- */
+.mod{
+  border:1px solid var(--line);border-radius:6px;
+  margin-bottom:12px;overflow:hidden;background:#fff;
+}
+.mod summary{
+  list-style:none;cursor:pointer;padding:18px 20px;
+  display:flex;gap:16px;align-items:baseline;
+}
+.mod summary::-webkit-details-marker{display:none}
+.mod summary:hover{background:var(--grey)}
+.mod .num{
+  flex:none;font-family:var(--serif);font-size:15px;font-weight:700;
+  color:#fff;background:var(--blue);
+  width:26px;height:26px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  align-self:flex-start;margin-top:1px;
+}
+.mod .head{flex:1;min-width:0}
+.mod .pillar{
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--blue);font-weight:700;margin:0 0 2px;
+}
+.mod .title{font-family:var(--serif);font-size:19px;color:var(--navy);margin:0}
+.mod .chev{flex:none;color:var(--muted);font-size:13px;margin-top:6px}
+.mod[open] .chev{transform:rotate(180deg)}
+.mod .body{padding:0 20px 22px 62px;border-top:1px solid var(--line);margin-top:-1px}
+.mod .body>*:first-child{margin-top:20px}
+.mod dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 18px}
+.mod dt{
+  font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);font-weight:700;padding-top:3px;white-space:nowrap;
+}
+.mod dd{margin:0}
+@media(max-width:560px){
+  .mod .body{padding-left:20px}
+  .mod dl{grid-template-columns:1fr;gap:2px 0}
+  .mod dd{margin-bottom:12px}
+}
+
+/* ---------- FFF ---------- */
+.fff{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 26px}
+@media(max-width:640px){.fff{grid-template-columns:1fr}}
+.fff div{
+  background:var(--grey);border-top:3px solid var(--blue);
+  border-radius:0 0 4px 4px;padding:20px;
+}
+.fff h3{font-family:var(--serif);font-size:20px;margin:0 0 6px}
+.fff p{margin:0;font-size:15px;color:var(--muted)}
+
+/* ---------- downloads ---------- */
+.dl{list-style:none;margin:0;padding:0}
+.dl li{border-bottom:1px solid var(--line)}
+.dl li:first-child{border-top:1px solid var(--line)}
+.dl a{
+  display:flex;gap:16px;align-items:center;
+  padding:16px 4px;text-decoration:none;color:inherit;
+}
+.dl a:hover{background:var(--grey)}
+.dl .ext{
+  flex:none;font-size:10px;font-weight:700;letter-spacing:.06em;
+  color:var(--blue);background:var(--blue-soft);
+  padding:5px 8px;border-radius:3px;min-width:46px;text-align:center;
+}
+.dl .n{flex:1;min-width:0}
+.dl .n b{display:block;font-size:16px;color:var(--navy);font-weight:600}
+.dl .n span{display:block;font-size:14px;color:var(--muted)}
+.dl .arr{flex:none;color:var(--blue);font-size:15px}
+
+/* ---------- video ---------- */
+.vids{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media(max-width:700px){.vids{grid-template-columns:1fr}}
+.v{
+  border:1px solid var(--line);border-radius:6px;overflow:hidden;
+  display:flex;flex-direction:column;background:#fff;
+}
+.v .ytc,.v iframe{
+  display:block;width:100%;aspect-ratio:16/9;
+  border:0;padding:0;margin:0;background:var(--navy);
+}
+.v .ytc{position:relative;cursor:pointer}
+.v .ytc img{width:100%;height:100%;object-fit:cover;display:block}
+.v .ytc .play{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:60px;height:42px;border-radius:8px;background:rgba(31,56,100,.85);
+  display:flex;align-items:center;justify-content:center;
+}
+.v .ytc .play::after{
+  content:"";margin-left:4px;border-left:15px solid #fff;
+  border-top:10px solid transparent;border-bottom:10px solid transparent;
+}
+.v .ytc:hover .play{background:var(--navy)}
+.v .ytc:focus-visible{outline:3px solid var(--blue);outline-offset:-3px}
+.vt{padding:18px 20px 20px}
+.vt h3{font-family:var(--serif);font-size:19px;font-weight:400;margin:0 0 8px}
+.vt p{margin:0;font-size:15px;color:var(--muted)}
+.vt .tag2{
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--blue);font-weight:700;margin:0 0 4px;
+}
+.vt .go{display:inline-block;margin-top:12px;font-size:15px;font-weight:600}
+.v.set{background:var(--grey);justify-content:center}
+.v.set .vt{padding:26px 22px}
+
+/* ---------- panels & lists ---------- */
+.panel{background:var(--grey);border-radius:6px;padding:24px 26px}
+.panel h3{margin-top:0}
+.check{list-style:none;margin:0;padding:0}
+.check li{
+  position:relative;padding:0 0 10px 26px;font-size:16px;
+}
+.check li::before{
+  content:"";position:absolute;left:1px;top:7px;
+  width:11px;height:6px;border:2px solid var(--blue);
+  border-top:0;border-right:0;transform:rotate(-45deg);
+}
+.q{list-style:none;margin:0;padding:0;counter-reset:q}
+.q li{
+  counter-increment:q;position:relative;padding:0 0 12px 34px;
+  font-family:var(--serif);font-size:18px;color:var(--navy);
+}
+.panel .q li:last-child{padding-bottom:0}
+.q li::before{
+  content:counter(q);position:absolute;left:0;top:1px;
+  width:22px;height:22px;border-radius:50%;
+  background:var(--navy);color:#fff;
+  font-family:var(--sans);font-size:12px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* ---------- days ---------- */
+.days{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:700px){.days{grid-template-columns:1fr}}
+.day{border:1px solid var(--line);border-radius:6px;padding:20px}
+.day .d{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);font-weight:700;margin:0 0 4px}
+.day h3{font-family:var(--serif);font-size:18px;margin:0 0 12px}
+.day ul{list-style:none;margin:0;padding:0;font-size:15px;color:var(--muted)}
+.day li{padding:3px 0;border-bottom:1px solid var(--grey)}
+.day li:last-child{border-bottom:0}
+
+.meta{font-size:15px;color:var(--muted)}
+.meta b{color:var(--ink)}
+
+/* ---------- footer ---------- */
+footer{background:var(--navy);color:#C7D4EA;padding:40px 0;font-size:15px}
+footer a{color:#fff}
+footer .name{font-family:var(--serif);font-size:19px;color:#fff;margin:0 0 6px}
+footer p{margin:0 0 4px}
+footer .fine{margin-top:20px;font-size:13px;color:#8FA5C8}
+
+@media print{
+  nav,.status{display:none}
+  .mod .body{display:block!important}
+  body{font-size:12pt}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">The Message Business &middot; for Global Business Services Puig</p>
+    <h1>Communication Skills Masterclass</h1>
+    <p class="sub">September 2026. Four online modules, face-to-face coaching in Barcelona, one-to-one coaching after Barcelona.</p>
+    <p class="through">A presentation is a journey you take the audience on, not a download of what you know. Fit sets the destination, Focus builds the road, Flair makes it memorable.</p>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#programme">Programme</a></li>
+    <li><a href="#modules">The four modules</a></li>
+    <li><a href="#model">The model</a></li>
+    <li><a href="#materials">Materials</a></li>
+    <li><a href="#video">Watch</a></li>
+    <li><a href="#task">Your task</a></li>
+    <li><a href="#barcelona">Barcelona</a></li>
+  </ul>
+</nav>
+
+<div class="status" id="statusStrip" hidden>
+  <div class="wrap inner">
+    <span class="dot"></span>
+    <div>
+      <h2 id="statusLabel">Next up</h2>
+      <p id="statusText"></p>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<section id="programme">
+  <div class="wrap">
+    <h2 class="sec">The programme</h2>
+    <p class="lede">Seven sessions in all. The online modules build the message. Barcelona builds the messenger. Online sessions run 09:00 to 11:00 UK, 10:00 to 12:00 Barcelona.</p>
+
+    <ul class="tl" id="timeline">
+      <li data-date="2026-09-01">
+        <p class="when">Tuesday 1 September</p>
+        <p class="what">Module 1: Fit</p>
+        <p class="note">Start with what the audience wants and needs, not the slides. Online, full cohort.</p>
+      </li>
+      <li data-date="2026-09-02">
+        <p class="when">Wednesday 2 September</p>
+        <p class="what">Module 2: Focus</p>
+        <p class="note">One message, a clear argument, a simple three-act story. Start strong and end with certainty. Online, full cohort.</p>
+      </li>
+      <li data-date="2026-09-05">
+        <p class="when">Between the weeks</p>
+        <p class="what">Complete the FIT and FOCUS tasks in the worksheet</p>
+        <p class="note">Bring the work to share in Module 3.</p>
+      </li>
+      <li data-date="2026-09-08">
+        <p class="when">Monday 8 September</p>
+        <p class="what">Module 3: Flair, the message</p>
+        <p class="note">Use active language and powerful imagery in the right place at the right time. Online, full cohort.</p>
+      </li>
+      <li data-date="2026-09-09">
+        <p class="when">Tuesday 9 September</p>
+        <p class="what">Module 4: Flair, the slides</p>
+        <p class="note">Using slides for impact, emphasis and illustration. Online, full cohort.</p>
+      </li>
+      <li data-date="2026-09-21">
+        <p class="when">Monday 21 to Wednesday 23 September</p>
+        <p class="what">Three days at Torre Puig, Barcelona</p>
+        <p class="note">09:00 to 18:00. Smaller groups, one day each. See below for who is on which day.</p>
+      </li>
+      <li data-date="2026-09-28">
+        <p class="when">From week beginning 28 September</p>
+        <p class="what">Individual follow-up</p>
+        <p class="note">Thirty minutes each, one to one. Dates arranged with you directly.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="modules">
+  <div class="wrap">
+    <h2 class="sec">The four modules</h2>
+    <p class="lede">Each module has one idea, one failure to avoid, and one discipline that fixes it. You work on a real presentation of your own throughout. Open a module to see what it covers.</p>
+
+    <details class="mod" open>
+      <summary>
+        <span class="num">1</span>
+        <span class="head">
+          <p class="pillar">Fit</p>
+          <p class="title">Start with the audience's wants and needs, not the slides</p>
+        </span>
+        <span class="chev">&#9660;</span>
+      </summary>
+      <div class="body">
+        <dl>
+          <dt>You leave with</dt><dd>An understanding of FIT, FOCUS &amp; FLAIR, with the focus on FIT.</dd>
+          <dt>The failure</dt><dd>You know your subject so well you forget what it is like not to, and that can make it hard to relate it to an audience who cares about what it does for them.</dd>
+          <dt>The discipline</dt><dd>Find out about your audience before you write anything else.</dd>
+        </dl>
+      </div>
+    </details>
+
+    <details class="mod">
+      <summary>
+        <span class="num">2</span>
+        <span class="head">
+          <p class="pillar">Focus</p>
+          <p class="title">One message, a three-act story, and a clear call to action</p>
+        </span>
+        <span class="chev">&#9660;</span>
+      </summary>
+      <div class="body">
+        <dl>
+          <dt>You leave with</dt><dd>A plan to help you prepare for your presentation: what do you want them to Know, Understand, Do? Your core message outlined in a single sentence. A draft story structure: three acts with headlines for each.</dd>
+          <dt>The failure</dt><dd>Hiding the message in the detail. The point arrives on slide thirty-six, long after the room has drifted away.</dd>
+          <dt>The discipline</dt><dd>Be really focused on what your message means.</dd>
+        </dl>
+      </div>
+    </details>
+
+    <details class="mod">
+      <summary>
+        <span class="num">3</span>
+        <span class="head">
+          <p class="pillar">Flair &middot; the message</p>
+          <p class="title">Make it easy to remember</p>
+        </span>
+        <span class="chev">&#9660;</span>
+      </summary>
+      <div class="body">
+        <dl>
+          <dt>You leave with</dt><dd>A 30-second prologue, a headline, a soundbite and an image for each of your three acts.</dd>
+          <dt>The failure</dt><dd>Writing for a reader instead of writing to be said out loud. Prose that reads well on the page is often hard to say and harder to hear.</dd>
+          <dt>The discipline</dt><dd>Say the words onto the page. Use active, direct words and language.</dd>
+        </dl>
+      </div>
+    </details>
+
+    <details class="mod">
+      <summary>
+        <span class="num">4</span>
+        <span class="head">
+          <p class="pillar">Flair &middot; the slides</p>
+          <p class="title">Create visuals to add impact, emphasis and illustration to your words</p>
+        </span>
+        <span class="chev">&#9660;</span>
+      </summary>
+      <div class="body">
+        <dl>
+          <dt>You leave with</dt><dd>A slide plan and a bullet-point script. This is the draft you bring to Barcelona.</dd>
+          <dt>The failure</dt><dd>The slide as teleprompter. You read it, so the audience stops listening and reads it too.</dd>
+          <dt>The discipline</dt><dd>Build the script first, then decide what visuals you need.</dd>
+          <dt>The slide check</dt><dd>Three seconds to understand it. One idea per slide. One object at a time. The headline carries the meaning. Animation for emphasis.</dd>
+        </dl>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section id="model">
+  <div class="wrap">
+    <h2 class="sec">Fit, Focus and Flair</h2>
+    <p class="lede">Three pillars of a great presentation. Get all three right, and the message lands quickly and sticks afterwards. Miss one and the other two work harder for less.</p>
+
+    <div class="fff">
+      <div>
+        <h3>Fit</h3>
+        <p>The right message for this audience, in this room, on this day.</p>
+      </div>
+      <div>
+        <h3>Focus</h3>
+        <p>One big idea, carried by a three-act story, ending in a clear call to action.</p>
+      </div>
+      <div>
+        <h3>Flair</h3>
+        <p>The words, the images and the delivery that make people remember it tomorrow.</p>
+      </div>
+    </div>
+
+    <p class="meta">If you have not yet completed the <b>Fit, Focus &amp; Flair assessment</b>, do it before the next module. It takes about ten minutes and gives you a personal profile across the three pillars. <a href="https://fff-assessment.themessagebusiness.com" target="_blank" rel="noopener">Open the assessment</a></p>
+  </div>
+</section>
+
+<section id="materials">
+  <div class="wrap">
+    <h2 class="sec">Your materials</h2>
+    <p class="lede">Everything you need for the online modules. Download them, work with them, bring them to the session.</p>
+
+    <ul class="dl">
+      <li><a href="files/FFF_Presentation_Explainer.pdf" download>
+        <span class="ext">PDF</span>
+        <span class="n"><b>Fit, Focus &amp; Flair: the rules of great communication</b><span>The model in full, with the examples used in the modules.</span></span>
+        <span class="arr">&#8595;</span>
+      </a></li>
+      <li><a href="files/Presentation_Preparation_Worksheet.pdf" download>
+        <span class="ext">PDF</span>
+        <span class="n"><b>Presentation preparation worksheet</b><span>Part A (Fit) and Part B (Focus) after Module 2. Part C (Flair) after Module 4.</span></span>
+        <span class="arr">&#8595;</span>
+      </a></li>
+    </ul>
+
+  </div>
+</section>
+
+<section id="video">
+  <div class="wrap">
+    <h2 class="sec">Watch</h2>
+    <p class="lede">Four things worth watching between the modules. Each one shows a part of the model working.</p>
+
+    <div class="vids">
+
+      <article class="v">
+        <button class="ytc" type="button" data-yt="VQKMoT-6XSg" data-title="Steve Jobs launches the iPhone, 2007" aria-label="Play: Steve Jobs launches the iPhone, 2007">
+          <img src="https://i.ytimg.com/vi/VQKMoT-6XSg/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.style.display='none'">
+          <span class="play" aria-hidden="true"></span>
+        </button>
+        <div class="vt">
+          <p class="tag2">Fit, Focus and Flair</p>
+          <h3>Steve Jobs launches the iPhone, 2007</h3>
+          <p>The whole model in one presentation. The keynote runs eighty minutes and the lesson is in the first ten. He tells the room what it is and why it matters before a single specification, and he does it in three parts.</p>
+        </div>
+      </article>
+
+      <article class="v">
+        <button class="ytc" type="button" data-yt="Iwpi1Lm6dFo" data-title="How to avoid death by PowerPoint" aria-label="Play: How to avoid death by PowerPoint">
+          <img src="https://i.ytimg.com/vi/Iwpi1Lm6dFo/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.style.display='none'">
+          <span class="play" aria-hidden="true"></span>
+        </button>
+        <div class="vt">
+          <p class="tag2">Module 4, the slides</p>
+          <h3>How to avoid death by PowerPoint</h3>
+          <p>David JP Phillips at TEDx Stockholm. Why the slide you built to help yourself is the one that loses the room, and what to put on it instead.</p>
+        </div>
+      </article>
+
+      <article class="v">
+        <button class="ytc" type="button" data-yt="kvmOAalDJZA" data-title="Explaining complex concepts" aria-label="Play: Explaining complex concepts">
+          <img src="https://i.ytimg.com/vi/kvmOAalDJZA/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.style.display='none'">
+          <span class="play" aria-hidden="true"></span>
+        </button>
+        <div class="vt">
+          <p class="tag2">Modules 1 and 2</p>
+          <h3>Explaining complex concepts</h3>
+          <p>Presentation Guru. What to do when you know the subject far better than the people sitting in front of you.</p>
+        </div>
+      </article>
+
+      <article class="v set">
+        <div class="vt">
+          <p class="tag2">Go deeper</p>
+          <h3>Presentation Guru podcasts</h3>
+          <p>A set of episodes on storytelling, speaking with charisma and slide design. Dip in wherever you need it.</p>
+          <a class="go" href="https://www.youtube.com/playlist?list=PLCaqtLyENUisP1F2Hv3s0KC_J8DPgP7kT" target="_blank" rel="noopener">Open the playlist on YouTube &#8599;</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="task">
+  <div class="wrap">
+    <h2 class="sec">Your task before Module 3</h2>
+    <p class="lede">Complete the FIT and FOCUS exercises in the Presentation Preparation Worksheet:</p>
+
+    <div class="panel">
+      <ol class="q">
+        <li>Understand the audience</li>
+        <li>Identify your presentation intent: Know, understand, do</li>
+        <li>Summarise your argument in a single sentence</li>
+      </ol>
+      <p class="meta" style="margin:18px 0 0"><a href="files/Presentation_Preparation_Worksheet.pdf" download>Download the worksheet</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="checklist">
+  <div class="wrap">
+    <h2 class="sec">Before you present, anything, ever</h2>
+    <p class="lede">Six questions. If you cannot answer all six, the presentation is not ready.</p>
+    <ul class="check">
+      <li>Does the audience understand why this matters to them?</li>
+      <li>Can your argument be summarised in one sentence?</li>
+      <li>Do you have a simple three-act story?</li>
+      <li>Do you have a strong start and a clear call to action at the end?</li>
+      <li>Have you removed all the visual and verbal clutter?</li>
+      <li>Do your slides pass the 3-second test?</li>
+    </ul>
+  </div>
+</section>
+
+<section id="barcelona">
+  <div class="wrap">
+    <h2 class="sec">Barcelona</h2>
+    <p class="lede">Three days, three smaller groups. Torre Puig, Plaza Europa 46/48, L'Hospitalet de Llobregat. 09:00 to 18:00.</p>
+
+    <div class="days">
+      <div class="day">
+        <p class="d">Monday 21 September</p>
+        <h3>Day 1</h3>
+        <ul>
+          <li>Kevin Pallares-Martinez</li>
+          <li>Fabiola Jimenez Covarrubias</li>
+          <li>Estefania Coch Escudero</li>
+          <li>Maria Fonoll Moreno</li>
+          <li>Roger Riera Ferrer</li>
+        </ul>
+      </div>
+      <div class="day">
+        <p class="d">Tuesday 22 September</p>
+        <h3>Day 2</h3>
+        <ul>
+          <li>Natalia Fuentes Llucia</li>
+          <li>Min Colinot</li>
+          <li>Anna Morente Gallardo</li>
+          <li>Shadi Gimenez</li>
+        </ul>
+      </div>
+      <div class="day">
+        <p class="d">Wednesday 23 September</p>
+        <h3>Day 3</h3>
+        <ul>
+          <li>Alejandra Larequi Maza</li>
+          <li>Gwilherm Audrain</li>
+          <li>Ignasi Sanz Antona</li>
+          <li>Florence Valla Bertholet</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="meta" style="margin-top:22px"><b>Bring:</b> your presentation slides on a laptop.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="name">Jim Harvey</p>
+    <p>The Message Business</p>
+    <p><a href="mailto:jim.harvey@themessagebusiness.com">jim.harvey@themessagebusiness.com</a></p>
+    <p class="fine">This page is for participants on the Puig Communication Skills Masterclass. Please do not share the link outside the group.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  var STEPS = [
+    {date:"2026-09-01", label:"Module 1, Fit", note:"Start with the room, not the slides."},
+    {date:"2026-09-02", label:"Module 2, Focus", note:"One message, three points, one decision."},
+    {date:"2026-09-05", label:"Complete the FIT and FOCUS tasks in the worksheet", note:"Bring the work to share in Module 3."},
+    {date:"2026-09-08", label:"Module 3, Flair", note:"09:00 to 11:00 UK, 10:00 to 12:00 Barcelona."},
+    {date:"2026-09-09", label:"Module 4, Flair", note:"09:00 to 11:00 UK, 10:00 to 12:00 Barcelona."},
+    {date:"2026-09-21", label:"Barcelona", note:"Three days at Torre Puig. One day each."},
+    {date:"2026-09-28", label:"Individual follow-up", note:"Thirty minutes each, arranged with you directly."}
+  ];
+
+  function midnight(s){
+    var p = s.split("-");
+    return new Date(+p[0], +p[1]-1, +p[2]).getTime();
+  }
+  function today(){
+    var n = new Date();
+    return new Date(n.getFullYear(), n.getMonth(), n.getDate()).getTime();
+  }
+
+  // Timeline states
+  var now = today();
+  var items = document.querySelectorAll("#timeline li");
+  var nextIndex = -1;
+  for (var i = 0; i < items.length; i++){
+    var d = midnight(items[i].getAttribute("data-date"));
+    if (d < now){
+      items[i].className = "done";
+      items[i].querySelector(".what").insertAdjacentHTML("beforeend", '<span class="tag done">Done</span>');
+    } else if (nextIndex === -1){
+      nextIndex = i;
+      items[i].className = "next";
+      items[i].querySelector(".what").insertAdjacentHTML("beforeend", '<span class="tag next">Next</span>');
+    }
+  }
+
+  // Status strip
+  var strip = document.getElementById("statusStrip");
+  if (nextIndex > -1){
+    var s = STEPS[nextIndex];
+    var days = Math.round((midnight(s.date) - now) / 86400000);
+    var when;
+    if (days <= 0) when = "today";
+    else if (days === 1) when = "tomorrow";
+    else if (days < 7) when = "in " + days + " days";
+    else when = new Date(midnight(s.date)).toLocaleDateString("en-GB", {day:"numeric", month:"long"});
+    document.getElementById("statusText").innerHTML =
+      "<strong>" + s.label + ", " + when + ".</strong> " + s.note;
+    strip.hidden = false;
+  }
+
+  // Video: swap the thumbnail for the player only when someone asks for it
+  var facades = document.querySelectorAll(".ytc");
+  for (var v = 0; v < facades.length; v++){
+    (function(btn){
+      btn.addEventListener("click", function(){
+        var f = document.createElement("iframe");
+        f.src = "https://www.youtube-nocookie.com/embed/" + btn.getAttribute("data-yt") + "?autoplay=1&rel=0";
+        f.title = btn.getAttribute("data-title") || "Video";
+        f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        f.setAttribute("allowfullscreen", "");
+        btn.parentNode.replaceChild(f, btn);
+      });
+    })(facades[v]);
+  }
+
+  // Nav highlight
+  var links = [].slice.call(document.querySelectorAll("nav a"));
+  var secs = links.map(function(a){ return document.querySelector(a.getAttribute("href")); });
+  function mark(){
+    var y = window.scrollY + 140, cur = 0;
+    for (var i = 0; i < secs.length; i++){
+      if (secs[i] && secs[i].offsetTop <= y) cur = i;
+    }
+    links.forEach(function(a, i){ a.className = (i === cur) ? "on" : ""; });
+  }
+  var ticking = false;
+  window.addEventListener("scroll", function(){
+    if (!ticking){
+      window.requestAnimationFrame(function(){ mark(); ticking = false; });
+      ticking = true;
+    }
+  }, {passive:true});
+  mark();
+})();
+</script>
+
+</body>
+</html>
