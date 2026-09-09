@@ -259,6 +259,18 @@ h3{font-size:18px;margin:0 0 8px;color:var(--navy)}
   display:flex;align-items:center;justify-content:center;
 }
 
+/* ---------- process figure ---------- */
+.flow{
+  margin:0 0 30px;border:1px solid var(--line);border-radius:6px;
+  overflow:hidden;background:#fff;
+}
+.flow a{display:block}
+.flow img{display:block;width:100%;height:auto}
+.flow figcaption{
+  padding:12px 16px;font-size:14px;color:var(--muted);
+  border-top:1px solid var(--line);background:var(--grey);
+}
+
 /* ---------- days ---------- */
 .days{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 @media(max-width:700px){.days{grid-template-columns:1fr}}
@@ -587,6 +599,14 @@ footer .fine{margin-top:20px;font-size:13px;color:#8FA5C8}
   <div class="wrap">
     <h2 class="sec">Barcelona</h2>
     <p class="lede">Three days, three smaller groups. Torre Puig, Plaza Europa 46/48, L'Hospitalet de Llobregat. 09:00 to 18:00.</p>
+
+    <figure class="flow">
+      <a href="files/barcelona-review-flow.png" target="_blank" rel="noopener">
+        <img src="files/barcelona-review-flow.png" width="2000" height="1125" loading="lazy"
+             alt="The presentation review flow. Stage 1, Strategy: analyse your audience (Fit), define the message (Focus), structure the narrative in three acts. Stage 2, Execution: master the opening (Flair), check every slide against the three-second test, and polish the ending so it returns to the opening with certainty.">
+      </a>
+      <figcaption>How we work, from your preparation through to the one to one sessions in Barcelona. Tap to open it full size.</figcaption>
+    </figure>
 
     <div class="days">
       <div class="day">
